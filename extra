@@ -1,0 +1,22 @@
+Home.Js:
+  <Modal visible={this.state.modalOpen} animationType='slide'>
+        <View>
+          <Text>Hello from Model</Text>
+          <TextInput placeholder="Type here" onChangeText={(text) => this.setState({title:text})} style=            {styles.textInputS}/>
+          <TouchableOpacity style={styles.addRem} onPress={()=> this.printText()}>
+              <Text style={styles.addRemT}> Add Reminder </Text>
+          </TouchableOpacity>
+        </View>
+      </Modal>
+
+
+
+<DateTimePicker
+        isVisible={this.state.isVisible2}
+        onConfirm={this.handlePicker2}
+        onCancel={this.hidePicker2}
+        mode={'datetime'}
+        is24Hour={false}
+        timePickerModeAndroid={'spinner'}
+        // time={this.state.selectedTime}
+      />
