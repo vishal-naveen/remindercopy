@@ -32,11 +32,13 @@ export default class Home extends Component {
     
     return (
       <>
-        <View style={styles.titleText}>
-          <Text style={styles.titleText}>Reminder App</Text>
+        <View style={{fontSize:50}}>
+          <Text style={{fontSize:35, fontFamily:"sans-serif-condensed", top:85, left:30}}>My Reminders</Text>
         </View>
-        <TouchableOpacity style={styles.routeCard} onPress={()=> this.props.navigation.navigate("AddReminder")}>
-          <Text style={styles.text}> Add Reminder </Text>
+        <TouchableOpacity style={styles.plusButttonTouch} onPress={console.log("this is plus button")}>
+        <Text style={styles.plusButtonText}>
+         +
+        </Text>
         </TouchableOpacity>
         <ScrollView>
           {this.state.taskItems.map((items,index)=> {
@@ -50,51 +52,13 @@ export default class Home extends Component {
   }
 }
 
-const styles = StyleSheet.create({
-  text: {
-    color:"white",
-    fontSize:30,
-    marginLeft:13,
-    marginTop:8
-  },
-  paragraph: {
-    margin: 24,
-    fontSize: 18,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  routeCard: {
-        flex:0.1,
-        marginLeft: 50,
-        marginRight: 50,
-        marginTop: -10,
-        borderRadius: 30,
-        backgroundColor: 'black'
-  },
-  addRem: {
-        width:150,
-        length:50,
-        borderRadius: 10,
-        borderWidth:2,
-        backgroundColor: 'black',
-        marginTop: 15,
-        marginLeft: 90
-  },
-  titleText: {
-    fontSize:50,
-  },
-  addRemT: {
-    fontSize:20,
-    color:'yellow'
-  },
-  modalBg:{
-    flex:1,
-    backgroundColor:"black",
-    justifyContent:'center',
-    alignItems:'center'
-  },
-  textInputS:{
-    borderWidth: 2,
-    borderColor:'black'
-  }
-});
+const styles = (StyleSheet.create = {
+     plusButtonTouch: {
+         marginLeft:50, marginRight:50, marginTop: -10,
+    }
+    , plusButtonText: {
+         color:"rgb(230,105,110)", fontSize:35, marginLeft:250, marginTop:50
+    }
+    , 
+}
+);
