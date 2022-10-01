@@ -20,3 +20,15 @@ Home.Js:
         timePickerModeAndroid={'spinner'}
         // time={this.state.selectedTime}
       />
+
+          console.log("splited date is ", date.substring(0,2))
+
+
+    /* <TextInput style={{borderWidth:2, borderColor:'black', borderRadius:10, fontSize:40, bottom:130, lineHeight:50}} multiline='true' maxLength='35' onContentSizeChange={(event) => this.handleSizeChange(event)} > Reminder 1 </TextInput>*/
+
+
+
+
+
+<Text style={{top:310,color:"rgb(230,105,110)",fontSize:17, left: 45,}}>Email</Text>
+<Text style={{color:"rgb(230,105,110)",fontSize:17, left: 45}}>Password</Text>
